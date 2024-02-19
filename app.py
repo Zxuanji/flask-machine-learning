@@ -5,7 +5,8 @@ from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:adminadmin@localhost:3306/blogapplication'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mssql+pyodbc://springbootapp@nblogserver:spboot@123@nblogserver.database.windows.net:1433/nblog?driver=ODBC+Driver+17+for+SQL+Server'
+
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
